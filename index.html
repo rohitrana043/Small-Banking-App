@@ -64,33 +64,25 @@
       </div>
     </header>
 
-    <section class="section" id="section--conversion">
+    <section class="section">
       <div class="section__title">
         <h2 class="section__description">Convert Currency</h2>
-        <h3 class="section__header">
+        <h3 class="section__header"  id="section--conversion">
           Enter details in all the inputs and click convert.
         </h3>
       </div>
       <div class="conversion__section">
         <div class="features__feature">
-          <form class="modal__form">
-            <label for="amoutn">Amount</label>
-            <input type="number" id="amount" name="amount" required />
+          <form class="modal__form" onsubmit="return false;">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" min="0" required />
             <label for="from">From</label>
-            <select id="from" name="from">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="JPY">JPY</option>
-              <option value="GBP">GBP</option>
-              <!-- Add more options here as needed -->
+            <select id="from" name="from" required>
+              <option value="">Select</option>
             </select>
             <label for="to">To</label>
-            <select id="to" name="to">
-              <option value="EUR">EUR</option>
-              <option value="JPY">JPY</option>
-              <option value="GBP">GBP</option>
-              <option value="USD">USD</option>
-              <!-- Add more options here as needed -->
+            <select id="to" name="to" required>
+              <option value="">Select</option>
             </select>
             <label id="converted__amount__label" class="hidden" for="converted__amount">Converted Amount</label>
             <h2 id="converted__amount" class="hidden">50</h2>
@@ -385,6 +377,5 @@
     </div>
     <div class="overlay hidden"></div>
 
-    <!-- <script src="currencyAPI.js"></script> -->
   </body>
 </html>
